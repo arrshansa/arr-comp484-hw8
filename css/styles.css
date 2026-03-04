@@ -1,0 +1,200 @@
+/* Box Model Fix (Step 5a) */
+* {
+    box-sizing: border-box;
+}
+
+/* Color Palette (from coolors.co)
+#1a1a2e - Deep Navy      (header background)
+#16213e - Dark Blue      (footer background)
+#0f3460 - Rich Blue      (work experience background)
+#e94560 - Coral Red      (accent / highlights)
+#f5f5f0 - Off White      (education background & body)
+*/
+
+/* Global styles */
+body {
+    background: #f5f5f0;
+    color: #1a1a2e;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+/* content-wrap — max-width, centered, with padding */
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* column-narrow — 30% left column */
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%; 
+    min-height: 175px;
+}
+
+/* column-wide — 70% right column */
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0;
+    color: #f5f5f0;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 0.25em;
+}
+
+p, li {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Header & Footer */
+header {
+    background-color: #1a1a2e;
+    color: #f5f5f0;
+}
+
+header h1,
+header h2 {
+    margin: 0;
+}
+
+header h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #e94560;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #c8c8d0;
+}
+
+header a {
+    color: #e94560;
+}
+
+/* profile image — circle, sized to fit inside column-narrow */
+.profile-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* float and width come from .column-narrow — no duplicate float here */
+}
+
+footer {
+    background-color: #16213e;
+    color: #f5f5f0;
+    text-align: center;
+}
+
+footer h2 {
+    color: #f5f5f0;
+}
+
+footer a {
+    color: #e94560;
+    font-weight: 400;
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: #8888aa;
+}
+
+/* contact-info links — spaced out with inline-block */
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+
+/* Work Experience */
+.work-experience {
+    background-color: #0f3460;
+    color: #f5f5f0;
+}
+
+.work-experience h2 {
+    color: #e94560;
+}
+
+.work-experience h3 {
+    color: #f5f5f0;
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-left: 3px solid #e94560;
+    padding-left: 0.75rem;
+}
+
+.work-experience p,
+.work-experience li {
+    color: #c8c8d0;
+}
+
+.work-experience ul {
+    padding-left: 1.5rem;
+}
+
+.work-experience li {
+    margin-bottom: 0.4em;
+}
+
+
+/* Education */
+.education {
+    background-color: #f0ede6;
+    color: #1a1a2e;
+}
+
+.education h2 {
+    color: #0f3460;
+}
+
+.education h3 {
+    color: #0f3460;
+    margin-top: 1.75rem;
+    border-left: 3px solid #e94560;
+    padding-left: 0.75rem;
+}
