@@ -5,23 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrshan Saravanabavanandam | Resume</title>
 
-    <!-- Google Fonts: Playfair Display (weights: 400, 700, 900) + DM Sans (weights: 300, 400, 600) -->
+    <!-- Google Fonts: Playfair Display + DM Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- // Intro -->
-    <header>
+
+    <!-- Anchor tags alone -->
+    <nav id="main-nav" role="navigation">
+        <div class="nav-container">
+            <span class="nav-brand">Arrshan S.</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+                <a href="arrshan_resume.pdf" class="nav-download" download>
+                    <i class="fa-solid fa-file-arrow-down"></i> Resume PDF
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro / Header -->
+    <header id="about">
         <div class="content-wrap">
 
-            <!-- Step 6b: column-narrow applied to profile image -->
             <img class="profile-img column-narrow" src="images/arr_resume_pic.JPG" alt="Arrshan Saravanabavanandam">
 
-            <!-- Step 6c: column-wide wraps the header text -->
             <div class="column-wide header-text">
                 <h1>Arrshan Saravanabavanandam</h1>
                 <h2>Computer Science Student &amp; Full-Stack Developer</h2>
@@ -36,12 +54,11 @@
     </header>
 
     <main>
-        <!-- // Projects -->
-        <section class="work-experience">
+        <!-- Projects -->
+        <section id="projects" class="work-experience">
             <div class="content-wrap">
                 <h2>Projects</h2>
 
-                <!-- Project Details -->
                 <div class="column-narrow">
                     <h3>Stocks Serverless Data Pipeline</h3>
                     <p>Personal Project</p>
@@ -57,9 +74,7 @@
                         <li>Deployed a responsive Single Page Application (SPA) on AWS S3 with a live dashboard to visualize Top Mover history.</li>
                     </ul>
                 </div>
-                <!-- end of Project Details block. -->
 
-                <!-- Project Details -->
                 <div class="column-narrow">
                     <h3>Livio - Apartment &amp; Marketplace Finder for Students</h3>
                     <p>Capstone Team Project</p>
@@ -76,9 +91,7 @@
                         <li>Collaborating with a team over a year-long capstone project following iterative development practices.</li>
                     </ul>
                 </div>
-                <!-- end of Project Details block. -->
 
-                <!-- Project Details -->
                 <div class="column-narrow">
                     <h3>Spoink Airlines - Airline Reservation Application</h3>
                     <p>Academic Project</p>
@@ -93,9 +106,7 @@
                         <li>Used JIRA for tracking, bug reporting, and sprint management.</li>
                     </ul>
                 </div>
-                <!-- end of Job Details block. -->
 
-                <!-- Project Details -->
                 <div class="column-narrow">
                     <h3>Research Associate - AI Mentor (NASA-Affiliated)</h3>
                     <p>ARCS, NASA Affiliated Research Center — CSUN</p>
@@ -108,48 +119,46 @@
                         <li>Gained experience in system design, model integration, and iterative evaluation of response quality.</li>
                     </ul>
                 </div>
-                <!-- end of Project Details block. -->
-
             </div>
         </section>
 
-
-        <!-- // Education -->
-        <section class="education">
+        <!-- Education: background image with RGBA gradient overlay -->
+        <section id="education" class="education">
             <div class="content-wrap">
                 <h2>Education</h2>
 
-                <!-- School details -->
-                <h3>California State University, Northridge - Graduating May 2026</h3>
+                <h3>Johns Hopkins University — Starting Fall 2026</h3>
+                <p>Master of Science in Engineering (MSE) in Computer Science</p>
+                <p>Whiting School of Engineering</p>
+
+                <h3>California State University, Northridge — Graduating May 2026</h3>
                 <p>Bachelor of Science in Computer Science | Minor in Data Science</p>
                 <p>CS Upper Division GPA: 3.69 &nbsp;|&nbsp; Data Science Minor GPA: 3.79</p>
                 <p>Relevant Coursework: Machine Learning, Algorithm Design, Data Mining, Data Structures &amp; Algorithms.</p>
-                <!-- End of school details. -->
 
-                <!-- School details -->
                 <h3>Certifications</h3>
                 <p>Google AI Essentials — Google | Jul 2024 | Cert ID: KM6VE5B6G4TM</p>
                 <p>PCEP – Certified Entry-Level Python Programmer — Python Institute | Feb 2026 | Cert ID: 2jun.GS1m.wcp2</p>
-                <!-- End of school details. -->
-
             </div>
         </section>
     </main>
 
-    <!-- // Footer & contact info -->
-    <footer>
+    <!-- Footer & contact info -->
+    <footer id="contact">
         <div class="content-wrap">
             <h2>Let's Keep in Touch!</h2>
 
-            <!-- Step 3f: contact-info div wraps all anchor tags -->
+            <!-- FontAwesome icons added to each contact link -->
             <div class="contact-info">
-                <a href="mailto:arrshansala@gmail.com">Gmail</a>
-                <a href="https://www.linkedin.com/in/arrshan-saravanabavanandam/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/arrshansa" target="_blank">GitHub</a>
+                <a href="/cdn-cgi/l/email-protection#59382b2b2a3138372a383538193e34383035773a3634">
+                    <i class="fa-solid fa-envelope"></i> Gmail
+                </a>
+                <a href="https://www.linkedin.com/in/arrshan-saravanabavanandam/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/arrshansa" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
             </div>
 
             <p>&copy; 2025 by Arrshan Saravanabavanandam</p>
-        </div>
-    </footer>
-</body>
-</html>

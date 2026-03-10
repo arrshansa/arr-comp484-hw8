@@ -1,9 +1,8 @@
-/* Box Model Fix (Step 5a) */
 * {
     box-sizing: border-box;
 }
 
-/* Color Palette (from coolors.co)
+/* Color Palette
 #1a1a2e - Deep Navy      (header background)
 #16213e - Dark Blue      (footer background)
 #0f3460 - Rich Blue      (work experience background)
@@ -21,7 +20,78 @@ body {
     line-height: 1.7;
     margin: 0;
     padding: 0;
+    /* Offset body so sticky nav doesn't cover page top */
+    padding-top: 60px;
 }
+
+
+/* navbar */
+#main-nav {
+    position: fixed;          /* ensures the navbar stays on top even if scrolled down */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #16213e;
+    border-bottom: 2px solid #e94560;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Brand / name on the left */
+.nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #f5f5f0;
+    letter-spacing: 0.03em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #c8c8d0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+    text-decoration: none;
+}
+
+/* PDF download button — visually distinct */
+.nav-links .nav-download {
+    background-color: #e94560;
+    color: #f5f5f0;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links .nav-download:hover {
+    background-color: #f5f5f0;
+    color: #e94560;
+}
+
 
 /* content-wrap — max-width, centered, with padding */
 .content-wrap {
@@ -35,8 +105,17 @@ body {
 .column-narrow {
     width: 30%;
     float: left;
-    padding-right: 3%; 
+    padding-right: 3%;
     min-height: 175px;
+}
+
+/* Override for profile image — don't let min-height distort the circle */
+.profile-img.column-narrow {
+    min-height: 0;
+    width: 200px;
+    height: 200px;
+    padding-right: 0;
+    margin-right: 5%;
 }
 
 /* column-wide — 70% right column */
@@ -86,7 +165,7 @@ a:hover {
 }
 
 
-/* Header & Footer */
+/* Header */
 header {
     background-color: #1a1a2e;
     color: #f5f5f0;
@@ -114,15 +193,21 @@ header a {
     color: #e94560;
 }
 
-/* profile image — circle, sized to fit inside column-narrow */
+/* Profile image */
 .profile-img {
     border-radius: 50%;
     width: 200px;
     height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    min-height: 0;
     object-fit: cover;
-    /* float and width come from .column-narrow — no duplicate float here */
+    display: block;
+    margin: 0 auto;
 }
 
+
+/* Footer with FontAwesome icons */
 footer {
     background-color: #16213e;
     color: #f5f5f0;
@@ -143,10 +228,23 @@ footer p {
     color: #8888aa;
 }
 
-/* contact-info links — spaced out with inline-block */
+/* contact-info links — spaced out */
 .contact-info a {
-    padding: 10px;
+    padding: 10px 15px;
     display: inline-block;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: #f5f5f0;
+    text-decoration: none;
+}
+
+/* FontAwesome icons sit nicely next to text */
+.contact-info a i {
+    margin-right: 6px;
+    font-size: 1.1rem;
 }
 
 
@@ -182,19 +280,33 @@ footer p {
 }
 
 
-/* Education */
+/* Education section: background image + RGBA gradient overlay */
 .education {
-    background-color: #f0ede6;
-    color: #1a1a2e;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(15, 52, 96, 0.88),   /* #0f3460 at 88% opacity on the left */
+            rgba(26, 26, 46, 0.55)    /* #1a1a2e at 55% opacity on the right */
+        ),
+        url('../images/hopkins.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f5f5f0;
 }
 
 .education h2 {
-    color: #0f3460;
+    color: #e94560;
 }
 
 .education h3 {
-    color: #0f3460;
+    color: #f5f5f0;
     margin-top: 1.75rem;
     border-left: 3px solid #e94560;
     padding-left: 0.75rem;
+}
+
+.education p {
+    color: #dde0e8;
 }
